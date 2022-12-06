@@ -1,0 +1,421 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+ 
+} 
+
+body{
+    
+    
+    
+}
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: transparent;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  
+  background-image: url(image/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg);
+  
+}
+
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  
+  
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+  flex-direction: column;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+
+}
+
+
+
+input[type="checkbox"]{
+  display: none;
+  
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+    flex-direction: column;
+    
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+    
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+    
+  }
+  #click:checked ~ ul{
+    left: 0;
+    
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+    
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+    
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+    
+  }
+  
+}
+
+img.plane{
+  margin-top: 30px;
+  width: 15%;
+  animation-name: plane;
+  animation-duration: 10s;
+  animation-delay: 0.1s;
+  animation-iteration-count: infinite;
+  position: relative;
+  transition-duration: 10s;
+  transition-delay: 0.1s;
+  transition: linear;
+}
+
+.img{
+  height: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(image/Untitled\ \(2\).png);
+}
+
+@keyframes  plane {
+
+  from{
+    top: 0%;
+    left: 0%;
+  }
+  to{
+    top: 0%;
+    left: 100%;
+  }
+}
+ 
+ 
+@media screen and (max-width:1000px) {
+
+  img.plane{
+    margin-top: 30px;
+    width: 15%;
+    
+    animation-name: plane;
+    animation-duration: 10s;
+    animation-delay: 0.1s;
+    animation-iteration-count: infinite;
+    position: relative;
+    transition-duration: 10s;
+    transition-delay: 0.1s;
+    transition: linear;
+  }
+  
+  @keyframes  plane {
+  
+    from{
+      top: 0%;
+      left: 0%;
+    }
+    to{
+      top: 0%;
+      left: 100%;
+    }
+  }
+
+ 
+  
+}
+
+@media screen and (max-width:1000px) {
+  .img{
+    height: auto;
+    width: 100%;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(image/Untitled\ \(2\).png);
+  }
+}
+
+
+
+/* Three columns side by side */
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    
+    
+  }
+
+  
+  
+  /* Display the columns below each other instead of side by side on small screens */
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+      
+      
+    }
+
+    
+  }
+  
+  /* Add some shadows to create a card effect */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    
+  }
+  
+  /* Some left and right padding inside the container */
+  .container {
+    padding: 0 16px;
+  }
+  
+  /* Clear floats */
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+
+  @media screen and(max-width:1000px) {
+    
+/* Three columns side by side */
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    
+  }
+  
+  /* Display the columns below each other instead of side by side on small screens */
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+      
+    }
+  }
+  
+  /* Add some shadows to create a card effect */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Some left and right padding inside the container */
+  .container {
+    padding: 0 16px;
+  }
+  
+  /* Clear floats */
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+    
+  }
+
+
+
+
+
+
+
+    .footer {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px;
+    color: #fff;
+    background-color: darkblue;
+    }
+    
+    .footer > * {
+    flex:  1 100%;
+    }
+    
+    .l-footer {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+    }
+    
+    h2 {
+    font-weight: 400;
+    font-size: 15px;
+    }
+    
+    .footer ul {
+    list-style: none;
+    padding-left: 0;
+    }
+    
+    .footer li {
+    line-height: 2em;
+    }
+    
+    .footer a {
+    text-decoration: none;
+    }
+    
+    .r-footer {
+    display: flex;
+    flex-flow: row wrap;
+    }
+    
+    .r-footer > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+    }
+    
+    .box a {
+    color: #999;
+    }
+    
+    .h-box {
+    column-count: 2;
+    column-gap: 1.25em;
+    }
+    
+    .b-footer {
+    text-align: center;
+    color: #999;
+    padding-top: 50px;
+    }
+    
+    .l-footer p {
+    padding-right: 20%;
+    color: #999;
+    }   
+    
+    @media screen and (min-width: 600px) {
+    .r-footer > * {
+    flex: 1;
+    }
+    
+    .features {
+    flex-grow: 2;
+    }
+    
+    .l-footer {
+    flex: 1 0px;
+    }
+    
+    .r-footer {
+    flex: 2 0px;
+    }
+    }
+     
